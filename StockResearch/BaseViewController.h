@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WBAPIManager.h"
 
 @interface BaseViewController : UIViewController
 

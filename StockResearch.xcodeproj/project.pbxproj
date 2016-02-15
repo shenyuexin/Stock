@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1845F46F1C71F62900604152 /* WBAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1845F46B1C71F62900604152 /* WBAPIManager.m */; };
+		1845F4701C71F62900604152 /* ResearchInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1845F46E1C71F62900604152 /* ResearchInfo.m */; };
 		186EB3801C63916B00C1B832 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186EB3761C63916B00C1B832 /* BaseViewController.m */; };
 		186EB3811C63916B00C1B832 /* CompanyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186EB3791C63916B00C1B832 /* CompanyViewController.m */; };
 		186EB3821C63916B00C1B832 /* IndustryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186EB37B1C63916B00C1B832 /* IndustryViewController.m */; };
 		186EB3831C63916B00C1B832 /* MacroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186EB37D1C63916B00C1B832 /* MacroViewController.m */; };
 		186EB3841C63916B00C1B832 /* StrategryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186EB37F1C63916B00C1B832 /* StrategryViewController.m */; };
-		186EB38A1C6398C400C1B832 /* HTMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 186EB3871C6398C400C1B832 /* HTMLNode.m */; };
-		186EB38B1C6398C400C1B832 /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 186EB3891C6398C400C1B832 /* HTMLParser.m */; };
 		186EB38F1C6398F400C1B832 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 186EB38E1C6398F400C1B832 /* libxml2.tbd */; };
 		189BB4F51C63877C00AC7E31 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BB4F41C63877C00AC7E31 /* main.m */; };
 		189BB4F81C63877C00AC7E31 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BB4F71C63877C00AC7E31 /* AppDelegate.m */; };
@@ -24,6 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1845F46A1C71F62900604152 /* WBAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBAPIManager.h; sourceTree = "<group>"; };
+		1845F46B1C71F62900604152 /* WBAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBAPIManager.m; sourceTree = "<group>"; };
+		1845F46D1C71F62900604152 /* ResearchInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResearchInfo.h; sourceTree = "<group>"; };
+		1845F46E1C71F62900604152 /* ResearchInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResearchInfo.m; sourceTree = "<group>"; };
 		186EB3751C63916B00C1B832 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		186EB3761C63916B00C1B832 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		186EB3781C63916B00C1B832 /* CompanyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompanyViewController.h; sourceTree = "<group>"; };
@@ -34,10 +38,6 @@
 		186EB37D1C63916B00C1B832 /* MacroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacroViewController.m; sourceTree = "<group>"; };
 		186EB37E1C63916B00C1B832 /* StrategryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StrategryViewController.h; sourceTree = "<group>"; };
 		186EB37F1C63916B00C1B832 /* StrategryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StrategryViewController.m; sourceTree = "<group>"; };
-		186EB3861C6398C400C1B832 /* HTMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLNode.h; sourceTree = "<group>"; };
-		186EB3871C6398C400C1B832 /* HTMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLNode.m; sourceTree = "<group>"; };
-		186EB3881C6398C400C1B832 /* HTMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLParser.h; sourceTree = "<group>"; };
-		186EB3891C6398C400C1B832 /* HTMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLParser.m; sourceTree = "<group>"; };
 		186EB38C1C6398D500C1B832 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
 		186EB38E1C6398F400C1B832 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		189BB4F01C63877C00AC7E31 /* StockResearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockResearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +66,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1845F4691C71F62900604152 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				1845F46A1C71F62900604152 /* WBAPIManager.h */,
+				1845F46B1C71F62900604152 /* WBAPIManager.m */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		1845F46C1C71F62900604152 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1845F46D1C71F62900604152 /* ResearchInfo.h */,
+				1845F46E1C71F62900604152 /* ResearchInfo.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		186EB3771C63916B00C1B832 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -79,17 +97,6 @@
 				186EB37F1C63916B00C1B832 /* StrategryViewController.m */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		186EB3851C6398C400C1B832 /* HtmlParse */ = {
-			isa = PBXGroup;
-			children = (
-				186EB3861C6398C400C1B832 /* HTMLNode.h */,
-				186EB3871C6398C400C1B832 /* HTMLNode.m */,
-				186EB3881C6398C400C1B832 /* HTMLParser.h */,
-				186EB3891C6398C400C1B832 /* HTMLParser.m */,
-			);
-			path = HtmlParse;
 			sourceTree = "<group>";
 		};
 		189BB4E71C63877C00AC7E31 = {
@@ -113,7 +120,8 @@
 		189BB4F21C63877C00AC7E31 /* StockResearch */ = {
 			isa = PBXGroup;
 			children = (
-				186EB3851C6398C400C1B832 /* HtmlParse */,
+				1845F4691C71F62900604152 /* Data */,
+				1845F46C1C71F62900604152 /* Model */,
 				186EB3771C63916B00C1B832 /* Controllers */,
 				186EB3751C63916B00C1B832 /* BaseViewController.h */,
 				186EB3761C63916B00C1B832 /* BaseViewController.m */,
@@ -276,15 +284,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				186EB38A1C6398C400C1B832 /* HTMLNode.m in Sources */,
 				186EB3811C63916B00C1B832 /* CompanyViewController.m in Sources */,
 				189BB4F81C63877C00AC7E31 /* AppDelegate.m in Sources */,
 				186EB3841C63916B00C1B832 /* StrategryViewController.m in Sources */,
-				186EB38B1C6398C400C1B832 /* HTMLParser.m in Sources */,
 				186EB3801C63916B00C1B832 /* BaseViewController.m in Sources */,
 				186EB3831C63916B00C1B832 /* MacroViewController.m in Sources */,
 				189BB4F51C63877C00AC7E31 /* main.m in Sources */,
 				186EB3821C63916B00C1B832 /* IndustryViewController.m in Sources */,
+				1845F4701C71F62900604152 /* ResearchInfo.m in Sources */,
+				1845F46F1C71F62900604152 /* WBAPIManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

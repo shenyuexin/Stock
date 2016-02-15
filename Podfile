@@ -11,5 +11,6 @@ pod 'SDWebImage'
 pod 'MJRefresh'
 pod 'MJExtension'
 pod 'FDFullscreenPopGesture'
+pod 'hpple'
 end
 

@@ -20,6 +20,9 @@
     
     self.navigationItem.title = @"公司研究";
     self.url = @"http://vip.stock.finance.sina.com.cn/q/go.php/vReport_List/kind/company/index.phtml";
+    [[[WBAPIManager sharedManager] reseachListWithUrl:self.url] subscribeNext:^(NSArray *list) {
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
