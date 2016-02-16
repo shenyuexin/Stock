@@ -28,10 +28,10 @@
         
         NSMutableAttributedString *attr = [[NSMutableAttributedString alloc] initWithString:content];
         NSMutableParagraphStyle *style = [NSMutableParagraphStyle new];
-        style.lineHeightMultiple = 1.3;
+        style.lineHeightMultiple = 1.5;
         style.paragraphSpacing = 10;
         [attr setAttributes:@{NSParagraphStyleAttributeName:style,
-                              NSFontAttributeName:[UIFont systemFontOfSize:14]}
+                              NSFontAttributeName:[UIFont systemFontOfSize:16]}
                       range:NSMakeRange(0, attr.length)];
         
         weakSelf.textView.attributedText = attr;
