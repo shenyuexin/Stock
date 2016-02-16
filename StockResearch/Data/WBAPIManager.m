@@ -91,7 +91,7 @@
             return replaceString;
         }
         else{
-            return [RACSignal empty];
+            return nil;
         }
     }];
 }

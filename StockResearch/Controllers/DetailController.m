@@ -25,19 +25,20 @@
     __weak DetailController *weakSelf = self;
     
     [[[WBAPIManager sharedManager] contentWithUrl:self.url] subscribeNext:^(NSString *content) {
-        
-        NSMutableAttributedString *attr = [[NSMutableAttributedString alloc] initWithString:content];
-        NSMutableParagraphStyle *style = [NSMutableParagraphStyle new];
-        style.lineHeightMultiple = 1.5;
-        style.paragraphSpacing = 10;
-        [attr setAttributes:@{NSParagraphStyleAttributeName:style,
-                              NSFontAttributeName:[UIFont systemFontOfSize:16]}
-                      range:NSMakeRange(0, attr.length)];
-        
-        weakSelf.textView.attributedText = attr;
-        [weakSelf.textView sizeToFit];
-        
-        [weakSelf.scroll setContentSize:CGSizeMake(WIDTH_SCREEN, MAX(CGRectGetHeight(self.textView.frame)+20, HEIGHT_SCREEN))];
+        if(content){
+            NSMutableAttributedString *attr = [[NSMutableAttributedString alloc] initWithString:content];
+            NSMutableParagraphStyle *style = [NSMutableParagraphStyle new];
+            style.lineHeightMultiple = 1.5;
+            style.paragraphSpacing = 10;
+            [attr setAttributes:@{NSParagraphStyleAttributeName:style,
+                                  NSFontAttributeName:[UIFont systemFontOfSize:16]}
+                          range:NSMakeRange(0, attr.length)];
+            
+            weakSelf.textView.attributedText = attr;
+            [weakSelf.textView sizeToFit];
+            
+            [weakSelf.scroll setContentSize:CGSizeMake(WIDTH_SCREEN, MAX(CGRectGetHeight(self.textView.frame)+20, HEIGHT_SCREEN))];
+        }
     }];
 }
 
