@@ -27,6 +27,7 @@
     __weak BaseViewController *weakSelf = self;
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [[[WBAPIManager sharedManager] reseachListWithUrl:weakSelf.url] subscribeNext:^(NSArray *list) {
+            [weakSelf.lists removeAllObjects];
             [weakSelf.lists addObjectsFromArray:list];
             [weakSelf.tableView reloadData];
             [weakSelf.tableView.mj_header endRefreshing];
@@ -95,12 +96,19 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [tableView deselectRowAtIndexPath:indexPath animated:NO];
-    
     ResearchInfo *research = self.lists[indexPath.row];
+    
     DetailController *detail = [DetailController new];
     detail.hidesBottomBarWhenPushed = YES;
     detail.url = research.url;
     [self.navigationController pushViewController:detail animated:YES];
+    
+    {
+        [[NSUserDefaults standardUserDefaults] setObject:@"1" forKey:research.rid];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        research.read = YES;
+        [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+    }
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 @end

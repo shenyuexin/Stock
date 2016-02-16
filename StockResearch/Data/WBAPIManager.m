@@ -104,19 +104,26 @@
         TFHppleElement *div = [element.children objectAtIndex:1];
         for(TFHppleElement *child in div.children){
             if([child.tagName isEqualToString:@"tr"] && [child.raw rangeOfString:@"tal f14"].location != NSNotFound){
+                
+                ResearchInfo *research = [ResearchInfo new];
                 NSArray *objElements = child.children;
                 
-                TFHppleElement *idElement = objElements[1];
                 TFHppleElement *contetElement = objElements[3];
-                TFHppleElement *timeElement = objElements[7];
-
-                ResearchInfo *research = [ResearchInfo new];
-                research.rid = idElement.text;
-                research.time = timeElement.text;
+                if(objElements.count >7){
+                    TFHppleElement *timeElement = objElements[7];
+                    research.time = timeElement.text;
+                }
                 
                 research.title = [[contetElement firstChildWithTagName:@"a"].text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
                 research.url = [self subString:contetElement.raw regex:@"(http).*(?=\">)"];
                 
+                NSCharacterSet *nonDigitCharacterSet = [[NSCharacterSet decimalDigitCharacterSet] invertedSet];
+                research.rid = [[research.url componentsSeparatedByCharactersInSet:nonDigitCharacterSet] componentsJoinedByString:@""];
+                
+                if([[NSUserDefaults standardUserDefaults] objectForKey:research.rid]){
+                    research.read = YES;
+                }
+
                 [array addObject:research];
             }
         }
