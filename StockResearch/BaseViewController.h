@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MJRefresh.h"
 #import "WBAPIManager.h"
 
 @interface BaseViewController : UIViewController
 
 @property (nonatomic, strong) UITableView *tableView;
 
+@property (nonatomic, strong) NSMutableArray *lists;
 @property (nonatomic, strong) NSString *url;
 @end

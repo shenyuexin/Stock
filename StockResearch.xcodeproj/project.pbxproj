@@ -21,6 +21,8 @@
 		189BB5031C63877D00AC7E31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 189BB5021C63877D00AC7E31 /* Assets.xcassets */; };
 		189BB5061C63877D00AC7E31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 189BB5041C63877D00AC7E31 /* LaunchScreen.storyboard */; };
 		3FE316D31EA37D9A436128B0 /* libPods-StockResearch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 87243CB2E70C98A56CF475EE /* libPods-StockResearch.a */; };
+		792925521C72C8FC00C65333 /* ResearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 792925511C72C8FC00C65333 /* ResearchCell.m */; };
+		792925561C72FE9700C65333 /* DetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 792925551C72FE9700C65333 /* DetailController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,11 @@
 		189BB5051C63877D00AC7E31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		189BB5071C63877D00AC7E31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6790C02999A491E6545C41EC /* Pods-StockResearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockResearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-StockResearch/Pods-StockResearch.release.xcconfig"; sourceTree = "<group>"; };
+		792925501C72C8FC00C65333 /* ResearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResearchCell.h; sourceTree = "<group>"; };
+		792925511C72C8FC00C65333 /* ResearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResearchCell.m; sourceTree = "<group>"; };
+		792925531C72CB2800C65333 /* APPMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPMacro.h; sourceTree = "<group>"; };
+		792925541C72FE9700C65333 /* DetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailController.h; sourceTree = "<group>"; };
+		792925551C72FE9700C65333 /* DetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailController.m; sourceTree = "<group>"; };
 		87243CB2E70C98A56CF475EE /* libPods-StockResearch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StockResearch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B83EB9EF4BD795061F445DEC /* Pods-StockResearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockResearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StockResearch/Pods-StockResearch.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,6 +102,8 @@
 				186EB37D1C63916B00C1B832 /* MacroViewController.m */,
 				186EB37E1C63916B00C1B832 /* StrategryViewController.h */,
 				186EB37F1C63916B00C1B832 /* StrategryViewController.m */,
+				792925541C72FE9700C65333 /* DetailController.h */,
+				792925551C72FE9700C65333 /* DetailController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -120,6 +129,7 @@
 		189BB4F21C63877C00AC7E31 /* StockResearch */ = {
 			isa = PBXGroup;
 			children = (
+				7929254F1C72C8DC00C65333 /* Cells */,
 				1845F4691C71F62900604152 /* Data */,
 				1845F46C1C71F62900604152 /* Model */,
 				186EB3771C63916B00C1B832 /* Controllers */,
@@ -127,6 +137,7 @@
 				186EB3761C63916B00C1B832 /* BaseViewController.m */,
 				189BB4F61C63877C00AC7E31 /* AppDelegate.h */,
 				189BB4F71C63877C00AC7E31 /* AppDelegate.m */,
+				792925531C72CB2800C65333 /* APPMacro.h */,
 				189BB4FF1C63877C00AC7E31 /* Main.storyboard */,
 				189BB5021C63877D00AC7E31 /* Assets.xcassets */,
 				189BB5041C63877D00AC7E31 /* LaunchScreen.storyboard */,
@@ -151,6 +162,15 @@
 				6790C02999A491E6545C41EC /* Pods-StockResearch.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		7929254F1C72C8DC00C65333 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				792925501C72C8FC00C65333 /* ResearchCell.h */,
+				792925511C72C8FC00C65333 /* ResearchCell.m */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		DE92C652AEEC4FC46BC902BD /* Frameworks */ = {
@@ -289,9 +309,11 @@
 				186EB3841C63916B00C1B832 /* StrategryViewController.m in Sources */,
 				186EB3801C63916B00C1B832 /* BaseViewController.m in Sources */,
 				186EB3831C63916B00C1B832 /* MacroViewController.m in Sources */,
+				792925561C72FE9700C65333 /* DetailController.m in Sources */,
 				189BB4F51C63877C00AC7E31 /* main.m in Sources */,
 				186EB3821C63916B00C1B832 /* IndustryViewController.m in Sources */,
 				1845F4701C71F62900604152 /* ResearchInfo.m in Sources */,
+				792925521C72C8FC00C65333 /* ResearchCell.m in Sources */,
 				1845F46F1C71F62900604152 /* WBAPIManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

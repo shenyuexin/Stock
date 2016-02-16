@@ -61,14 +61,12 @@
     
     RACSignal *signal = [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         NSURLSessionDataTask *task = [sessionManager dataTaskWithRequest:request completionHandler:^(NSURLResponse * _Nonnull response, id _Nonnull responseObject, NSError * _Nullable error) {
-            TFHpple *doc = [[TFHpple alloc] initWithHTMLData:responseObject];
             if(error){
                 [subscriber sendError:error];
             }
             else{
-                TFHppleElement *element  = [[doc searchWithXPathQuery:@"//div[@class='main']"] firstObject];
-                
-                [subscriber sendNext:element];
+                TFHpple *doc = [[TFHpple alloc] initWithHTMLData:responseObject];
+                [subscriber sendNext:doc];
                 [subscriber sendCompleted];
             }
         }];
@@ -82,10 +80,26 @@
     return signal;
 }
 
+- (RACSignal *)contentWithUrl:(NSString *)url
+{
+    return [[self signalWithUrl:url] map:^id(TFHpple *doc) {
+        TFHppleElement *element  = [[doc searchWithXPathQuery:@"//div[@class='blk_container']"] firstObject];
+        
+        if(element.children.count >1){
+            TFHppleElement *contentElement = element.children[1];
+            NSString *replaceString = [[[contentElement.raw stringByReplacingOccurrencesOfString:@"<br />" withString:@""] stringByReplacingOccurrencesOfString:@"<p>" withString:@""] stringByReplacingOccurrencesOfString:@"</p>" withString:@""];
+            return replaceString;
+        }
+        else{
+            return [RACSignal empty];
+        }
+    }];
+}
 
 - (RACSignal *)reseachListWithUrl:(NSString *)url
 {
-    return [[self signalWithUrl:url] map:^id(TFHppleElement *element) {
+    return [[self signalWithUrl:url] map:^id(TFHpple *doc) {
+        TFHppleElement *element  = [[doc searchWithXPathQuery:@"//div[@class='main']"] firstObject];
         NSMutableArray *array = [NSMutableArray array];
         TFHppleElement *div = [element.children objectAtIndex:1];
         for(TFHppleElement *child in div.children){

@@ -14,5 +14,7 @@
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *url;
 @property (nonatomic, strong) NSString *time;
-@property (nonatomic, assign) BOOL read;
+
+@property (nonatomic, assign) NSInteger index;
+@property (nonatomic, assign, getter=isRead) BOOL read;
 @end

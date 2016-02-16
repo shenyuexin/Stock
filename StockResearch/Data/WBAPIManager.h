@@ -18,7 +18,7 @@
 
 + (instancetype)sharedManager;
 
-- (RACSignal *)signalWithUrl:(NSString *)url;
+- (RACSignal *)contentWithUrl:(NSString *)url;
 
 - (RACSignal *)reseachListWithUrl:(NSString *)url;
 @end

@@ -19,6 +19,7 @@
     // Do any additional setup after loading the view.
     self.navigationItem.title = @"行业研究";
     self.url = @"http://vip.stock.finance.sina.com.cn/q/go.php/vReport_List/kind/industry/index.phtml";
+    [self.tableView.mj_header beginRefreshing];
 }
 
 - (void)didReceiveMemoryWarning {

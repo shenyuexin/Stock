@@ -16,21 +16,21 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="HvE-fZ-X3X" kind="relationship" relationship="viewControllers" id="nqz-EW-Ev6"/>
-                        <segue destination="5GS-wN-iwK" kind="relationship" relationship="viewControllers" id="GiZ-Zv-fW1"/>
-                        <segue destination="gmD-0s-3T5" kind="relationship" relationship="viewControllers" id="HjW-rl-IMb"/>
-                        <segue destination="fCG-32-e5J" kind="relationship" relationship="viewControllers" id="BLW-Eb-wAw"/>
+                        <segue destination="5GS-wN-iwK" kind="relationship" relationship="viewControllers" id="SyL-EW-7Dh"/>
+                        <segue destination="HvE-fZ-X3X" kind="relationship" relationship="viewControllers" id="wAp-Dm-cBV"/>
+                        <segue destination="gmD-0s-3T5" kind="relationship" relationship="viewControllers" id="8aT-kx-uM7"/>
+                        <segue destination="fCG-32-e5J" kind="relationship" relationship="viewControllers" id="Fnb-d8-B31"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-409.5" y="-134.25"/>
         </scene>
-        <!--Item-->
+        <!--公司研究-->
         <scene sceneID="xBN-mQ-xGI">
             <objects>
                 <navigationController id="HvE-fZ-X3X" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Mh1-nT-kWb"/>
+                    <tabBarItem key="tabBarItem" title="公司研究" id="Mh1-nT-kWb"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="oCe-J7-xKS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -41,7 +41,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hYn-tO-9aI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="381" y="-369"/>
+            <point key="canvasLocation" x="357" y="175"/>
         </scene>
         <!--Company View Controller-->
         <scene sceneID="TkJ-Qu-lfx">
@@ -60,13 +60,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8AL-uv-rPV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1075.5" y="-369"/>
+            <point key="canvasLocation" x="1067" y="175"/>
         </scene>
-        <!--Item-->
+        <!--投资策略-->
         <scene sceneID="PBq-Bb-sFw">
             <objects>
                 <navigationController id="gmD-0s-3T5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="wJx-jB-wwD"/>
+                    <tabBarItem key="tabBarItem" title="投资策略" id="wJx-jB-wwD"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="QzN-on-wXm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -79,11 +79,11 @@
             </objects>
             <point key="canvasLocation" x="381" y="944.25"/>
         </scene>
-        <!--Item-->
+        <!--宏观经济-->
         <scene sceneID="adL-ip-qKz">
             <objects>
                 <navigationController id="fCG-32-e5J" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="xWX-uc-Y3J"/>
+                    <tabBarItem key="tabBarItem" title="宏观经济" id="xWX-uc-Y3J"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NpB-2I-yrQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -134,11 +134,11 @@
             </objects>
             <point key="canvasLocation" x="1075.5" y="944.25"/>
         </scene>
-        <!--Item-->
+        <!--行业研究-->
         <scene sceneID="itS-oe-d1X">
             <objects>
                 <navigationController id="5GS-wN-iwK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Pwx-gc-1S9"/>
+                    <tabBarItem key="tabBarItem" title="行业研究" id="Pwx-gc-1S9"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Aq9-90-JNK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -149,7 +149,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SqM-ah-KCN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="381" y="288"/>
+            <point key="canvasLocation" x="381" y="-708"/>
         </scene>
         <!--Industry View Controller-->
         <scene sceneID="gDl-ah-D7z">
@@ -168,7 +168,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X2c-5m-df6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1075.5" y="288"/>
+            <point key="canvasLocation" x="1067" y="-708"/>
         </scene>
     </scenes>
 </document>

@@ -20,6 +20,8 @@
     self.navigationItem.title = @"宏观经济";
     
     self.url = @"http://vip.stock.finance.sina.com.cn/q/go.php/vReport_List/kind/macro/index.phtml";
+    [self.tableView.mj_header beginRefreshing];
+
 }
 
 - (void)didReceiveMemoryWarning {
